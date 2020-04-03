@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
 int main()
+<<<<<<< HEAD
 cout << "A + B = " << a + b << '\n'
      << "A - B = " << a - b << '\n'
 	 << "A * B = " << a * b << '\n'
@@ -22,4 +22,29 @@ double max=poisk[0];
     }
 cout <<"max="<<max<<'\n';
 return 0;
+=======
+{
+    cout << "Enter A and B: ";
+    int a, b;
+    cin >> a >> b;
+    cout << "A + B = " << a + b << '\n'
+         << "A - B = " << a - b << '\n'
+         << "A * B = " << a * b << '\n'
+         << "A / B = " << a / b << '\n';
+    vector <double> poisk(4);
+    poisk[0] = a + b;
+    poisk[1] = a - b;
+    poisk[2] = a * b;
+    poisk[3] = a / b;
+    double min = poisk[0];
+    for (size_t i = 0; i < 3; i++)
+    {
+        if (min > poisk[i + 1])
+        {
+            min = poisk[i + 1];
+        }
+    }
+    cout << "min=" << min << '\n';
+    return 0;
+>>>>>>> code: поиск минимума у Боба
 }
